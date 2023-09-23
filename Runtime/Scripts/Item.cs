@@ -5,7 +5,7 @@ namespace lotecsoftware.items {
     public interface IItem {
         string Name { get; }
         string Description { get; }
-        UnityEvent Added { get; set; } // TODO: Kanske ta bort denna...?
+        UnityEvent Added { get; }
     }
 
     [System.Serializable]
@@ -16,10 +16,7 @@ namespace lotecsoftware.items {
 
         public string Name => _name;
         public string Description => _description;
-        public UnityEvent Added {
-            get { return _added; }
-            set { _added = value; }
-        }
+        public UnityEvent Added => _added;
 
         public Item(string name = null, string description = null) {
             _name = name;

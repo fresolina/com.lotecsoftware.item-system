@@ -2,6 +2,9 @@ using UnityEngine;
 using UnityEngine.Events;
 
 namespace lotecsoftware.items {
+    /// <summary>
+    /// ScriptableObject wrapper for Item
+    /// </summary>
     [CreateAssetMenu(fileName = "SimpleItem", menuName = "Items/SimpleItem")]
     public class ItemSO : ScriptableObject, IItem {
         [SerializeField] Item _item;
@@ -9,7 +12,7 @@ namespace lotecsoftware.items {
 
         public string Name => ((IItem)_item).Name;
         public string Description => ((IItem)_item).Description;
-        public UnityEvent Added { get => ((IItem)_item).Added; set => ((IItem)_item).Added = value; }
+        public UnityEvent Added => ((IItem)_item).Added;
 
         public override string ToString() {
             if (string.IsNullOrEmpty(_toStringCache)) {

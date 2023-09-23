@@ -15,8 +15,7 @@ namespace lotecsoftware.items {
                 return;
 
             for (int i = 0; i < _startingItems.Length; i++) {
-                ItemMB item = _startingItems[i];
-                ItemController.Inventory.Add(item);
+                AddItem(_startingItems[i]);
             }
         }
     }
