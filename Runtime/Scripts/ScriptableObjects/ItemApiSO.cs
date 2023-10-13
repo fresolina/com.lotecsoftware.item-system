@@ -3,8 +3,8 @@ using UnityEngine;
 namespace lotecsoftware.items {
     // NOTE: More like ItemInventoryApi, but maybe it's simpler to call it ItemApi.
     public interface IItemApi {
-        public void AddItem(IItem item);
-        public bool HasItem(IItem item);
+        void AddItem(IItem item);
+        bool HasItem(IItem item);
     }
 
     /// <summary>
@@ -12,7 +12,7 @@ namespace lotecsoftware.items {
     /// Ensures void functions, and Unity Object arguments.
     /// </summary>
     public interface IItemApiUnity {
-        public void AddItem(ItemSO item);
+        void AddItem(ItemSO item);
     }
 
     /// <summary>
@@ -20,7 +20,7 @@ namespace lotecsoftware.items {
     /// Must be initialized with a handler from Init().
     /// </summary>
     [CreateAssetMenu(fileName = "ItemApi", menuName = "Items/ItemApi", order = 0)]
-    public class ItemApi : ScriptableObject, IItemApiUnity {
+    public class ItemApiSO : ScriptableObject, IItemApiUnity {
         IItemApi _handler;
 
         public void Init(IItemApi handler) {
