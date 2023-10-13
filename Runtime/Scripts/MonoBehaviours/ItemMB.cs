@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using lotecsoftware.items;
 using UnityEngine;
 using UnityEngine.Events;
 

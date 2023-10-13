@@ -1,6 +1,3 @@
-using System.Collections.Generic;
-using UnityEngine;
-
 namespace lotecsoftware.items {
     /// <summary>
     /// Has an Inventory of items.
